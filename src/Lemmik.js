@@ -6,7 +6,7 @@ function Lemmik() {
                     <h2>Kevade</h2>
                     <p><strong>Autor:</strong> Oskar Luts</p>
                     <p><strong>Aasta:</strong> 1912</p>
-                    <p><strong>Kirjeldus:</strong> Eesti klassikaline romaan</p>
+                    <p><strong>Kirjeldus:</strong> Eesti klassikaline romaan.</p>
                 </li>
                 <li>
                     <h2>Tõde ja õigus</h2>
