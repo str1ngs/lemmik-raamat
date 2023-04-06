@@ -1,4 +1,3 @@
-import './App.css';
 import Lemmik from './Lemmik.js';
 
 function App() {
