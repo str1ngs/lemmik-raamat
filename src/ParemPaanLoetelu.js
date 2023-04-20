@@ -3,7 +3,7 @@ function ParemPaanLoetelu(props) {
         <div className="paremPaan">
                 <p>Raamatu nimetus: {props.nimi} </p>
                 <p>Autor: {props.autor} </p>
-                <img src={props.pilt} width="400px"/>
+                <img src={props.pilt} alt={props.nimi} width="400px"/>
         </div>
     )
 }

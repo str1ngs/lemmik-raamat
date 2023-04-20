@@ -1,17 +1,22 @@
 import VasakPaanLoetelu, { raamatud } from './VasakPaanLoetelu.js';
+import LisaRaamat from './LisaRaamat.js';
 import './App.css';
 import ParemPaanLoetelu from './ParemPaanLoetelu.js';
+
 
 
 function App() {
   return (
     <div className="App">
-      <div class="container">
+      <div className="container">
                 <div class="row align-items-start">
                     <div class="col">
                       <div className="Vasak">
                         <h1>Raamatute nimekiri:</h1>
-                        <VasakPaanLoetelu />
+                        {raamatud.map((element, id) => {
+                        return (<VasakPaanLoetelu key={id} nimi={element.nimi}/>)       
+                        })}
+                        <LisaRaamat />
                         </div>
                     </div>
                     <div class="col">
