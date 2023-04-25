@@ -1,32 +1,5 @@
 import { useState } from "react";
-import kevade from "./pictures/kevade.jpg";
 
-export const raamatud = [
-  {
-    id: 1,
-    nimi: "Kevade",
-    autor: "Oskar Luts",
-    aasta: 1912,
-    kirjeldus: "Eesti klassikaline romaan.",
-    pilt: kevade,
-  },
-  {
-    id: 2,
-    nimi: "Tõde ja õigus",
-    autor: "A. H. Tammsaare",
-    aasta: 1926 - 1933,
-    kirjeldus: "Eesti kirjanduse üks suurimaid ja mõjukamaid teoseid.",
-    pilt: null,
-  },
-  {
-    id: 3,
-    nimi: "Rehepapp",
-    autor: "Andrus Kivirähk",
-    aasta: 2000,
-    kirjeldus:'Komöödiline romaan, mis põhineb Eesti rahvuslikul müüdil "Kalevipoeg".',
-    pilt: null,
-  },
-];
     
 function VasakPaanLoetelu(props) {
   let [arv, setArv] = useState(0);
@@ -46,7 +19,10 @@ function VasakPaanLoetelu(props) {
   return (
     <div className="vasakPaan">
       <ul>
-            <li>{props.nimi}</li>
+            <li>Raamatu nimetus: {props.nimi}</li>
+            <p>Autor: {props.autor}</p>
+            <p>Aasta: {props.aasta}</p>
+            <p>Kirjeldus: {props.kirjeldus}</p>
             <p style={{ color: "green", fontSize: "13px" }}>
               Mitu korda lugenud:
             </p>

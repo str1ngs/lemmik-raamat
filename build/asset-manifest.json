@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "./static/css/main.3e102282.css",
-    "main.js": "./static/js/main.b857f1aa.js",
+    "main.js": "./static/js/main.9f5dcfee.js",
     "static/js/787.4d835c45.chunk.js": "./static/js/787.4d835c45.chunk.js",
     "static/media/kevade.jpg": "./static/media/kevade.e74467a1360ec49dbdf4.jpg",
     "index.html": "./index.html",
     "main.3e102282.css.map": "./static/css/main.3e102282.css.map",
-    "main.b857f1aa.js.map": "./static/js/main.b857f1aa.js.map",
+    "main.9f5dcfee.js.map": "./static/js/main.9f5dcfee.js.map",
     "787.4d835c45.chunk.js.map": "./static/js/787.4d835c45.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3e102282.css",
-    "static/js/main.b857f1aa.js"
+    "static/js/main.9f5dcfee.js"
   ]
 }
