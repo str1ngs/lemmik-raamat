@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-    
-function VasakPaanLoetelu(props) {
+function VasakPaanLoetelu( {raamat, kustutaRaamat, valiRaamat} ) {
+
   let [arv, setArv] = useState(0);
 
   const suurenda = () => {
@@ -19,20 +19,22 @@ function VasakPaanLoetelu(props) {
   return (
     <div className="vasakPaan">
       <ul>
-            <li>Raamatu nimetus: {props.nimi}</li>
-            <p>Autor: {props.autor}</p>
-            <p>Aasta: {props.aasta}</p>
-            <p>Kirjeldus: {props.kirjeldus}</p>
-            <p style={{ color: "green", fontSize: "13px" }}>
-              Mitu korda lugenud:
-            </p>
-            <button type="button" onClick={vahenda}>
-              -
-            </button>
-            <button type="button" onClick={suurenda}>
-              +
-            </button>
-            {arv}
+        <li  style={{cursor: "pointer"}} onClick={() => valiRaamat(raamat)}>Raamatu nimetus: {raamat.nimi}</li>
+        <p style={{ color: "green", fontSize: "13px" }}>Mitu korda lugenud:</p>
+        <button type="button" onClick={vahenda}>
+          -
+        </button>
+        <button type="button" onClick={suurenda}>
+          +
+        </button>
+        {arv}
+        <p></p>
+        <button
+          className="col-1 btn btn-link"
+          onClick={() => kustutaRaamat(raamat)}
+        >
+          <p>Kustuta</p>
+        </button>
       </ul>
     </div>
   );

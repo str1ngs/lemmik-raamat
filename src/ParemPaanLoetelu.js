@@ -1,9 +1,11 @@
-function ParemPaanLoetelu(props) {
+function ParemPaanLoetelu({ valitudRaamatud }) {
     return (
         <div className="paremPaan">
-                <p>Raamatu nimetus: {props.nimi} </p>
-                <p>Autor: {props.autor} </p>
-                <img src={props.pilt} alt={props.nimi} width="400px"/>
+            <p>{valitudRaamatud.nimi}</p>
+            <p>{valitudRaamatud.autor}</p>
+            <p>{valitudRaamatud.aasta}</p>
+            <p>{valitudRaamatud.kirjeldus}</p>
+            <p>{valitudRaamatud.pilt}</p>       
         </div>
     )
 }

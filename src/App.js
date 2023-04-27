@@ -47,9 +47,19 @@ function App() {
     }
 
     setRaamatud([...raamatud, uusRaamat]);
-};
+  };
 
+  const kustutaRaamat = (raamat) => {
+    const uuedRaamatud = raamatud.filter( (r) => {
+      return r !== raamat });
+    setRaamatud(uuedRaamatud);
+  };
+  const [valitudRaamat, setValitudRaamat] = useState("");
   
+  const valiRaamat = (raamat) => {
+      setValitudRaamat(raamat);
+  }
+
   return (
     <div className="App">
       <div className="container">
@@ -57,16 +67,18 @@ function App() {
           <div className="col">
             <div className="Vasak">
               <h1>Raamatute nimekiri:</h1>
-              {raamatud.map((element) => {
+              {raamatud.map((raamat, index) => {
                 return (
                   <VasakPaanLoetelu 
-                  key={element.id} 
-                  nimi={element.nimi} 
-                  autor={element.autor}
-                  aasta={element.aasta}
-                  kirjeldus={element.kirjeldus} />
+                  key={index} 
+                  raamat={raamat}
+                  kustutaRaamat={kustutaRaamat}
+                  valiRaamat={valiRaamat}
+                   />
                 );
+                
               })}
+              
               <form onSubmit={handleSubmit} className="LisaRaamat">
                 <h4>Lisa uus raamat: </h4>
                 <div className="form-group">
@@ -98,10 +110,8 @@ function App() {
           <div className="col">
             <div className="Parem">
               <h1>Lemmikraamat:</h1>
-              <ParemPaanLoetelu
-                nimi={raamatud[0].nimi}
-                autor={raamatud[0].autor}
-                pilt={raamatud[0].pilt}
+              <ParemPaanLoetelu valitudRaamatud={valitudRaamat}
+                
               />
             </div>
           </div>
